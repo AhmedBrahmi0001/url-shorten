@@ -18,7 +18,8 @@ router.post("/shorten", async (req, res) => {
     if (url) {
       return res.json(url);
     } else {
-      const shortUrl = shortid.generate();
+      // Generate short URL and encode it
+      const shortUrl = encodeURIComponent(shortid.generate());
       url = new Url({ originalUrl, shortUrl });
       await url.save();
       res.json(url);

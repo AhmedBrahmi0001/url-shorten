@@ -1,4 +1,3 @@
-// tests/urlShortener.test.js - Unit Tests for URL Shortener
 
 const request = require("supertest");
 const mongoose = require("mongoose");
