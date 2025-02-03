@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
-import { shortenUrl } from "./api"; 
+import { shortenUrl } from "./api";
 
 function App() {
   const [url, setUrl] = useState("");
@@ -9,8 +9,8 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const data = await shortenUrl(url); 
-      setShortUrl(data.shortUrl); 
+      const data = await shortenUrl(url);
+      setShortUrl(data.shortUrl);
     } catch (error) {
       console.error("Failed to shorten URL");
     }
